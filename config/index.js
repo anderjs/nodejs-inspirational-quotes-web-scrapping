@@ -4,6 +4,9 @@ const config = {
   },
   cron: {
     time: '* * * * *'
+  },
+  server: {
+    port: 3000
   }
 }
 
