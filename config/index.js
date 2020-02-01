@@ -1,6 +1,9 @@
 const config = {
   scanner: {
     PROVERBIA: 'https://proverbia.net/'
+  },
+  cron: {
+    time: '* * * * *'
   }
 }
 

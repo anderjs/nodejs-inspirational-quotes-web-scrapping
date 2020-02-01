@@ -4,16 +4,19 @@ const request = require('request')
 const path = require('path')
 
 const config = require('./config')
+const tasks = require('./tasks')
 
 const store = {
   $: null,
   scanner: {
-    tag: 'blockquote'
+    tag: 'blockquote',
+    author: ['a', 'title']
   },
   storage: {
     dirname: path.join(__dirname, 'content', 'index.json')
   },
   content: [],
+  children: [],
   utils: {
     regExp: /\s\s+/g
   }
@@ -37,37 +40,41 @@ request(config.scanner.PROVERBIA,
     })
   }
 
- 
-  /**
-   * Getting our content from the tag.
-   * @type {string}
-   */
-  store.$(store.scanner.tag).each(function(index, element) {
+  const [ selector, attribute ] = store.scanner.author
 
-    const { $, utils  } = store
-    
-    /**
-     * We got here the text of each author.
-     * @type {string}
-     */
+
+  store.$(store.scanner.tag).children('p').each(function(index, element) {
+    const { $, utils } = store
+
     const text = $(this).remove('footer').text().replace(utils.regExp, '')
 
-    store.content.push(text)
+    store.children.push(text)
   })
 
-  store.content = store.content.map(
+  store.$(store.scanner.tag).children('footer').each(function(index, element) {
+    const { $, utils } = store
+
     /**
-     * @param {string} element
+     * @type {string}
      */
-    element => {
-    const getLastDot = element.lastIndexOf('.')
+    const quote = $(this).find('a').next().text()
 
-    return {
-      text: element.substr(0, getLastDot),
-      category: element.substr(getLastDot + 1, element.length)
-    }
+    const author = $(this).find('a').attr('title')
+
+    store.content.push({
+      quotation: Boolean(quote) ? quote.substr(0, quote.lastIndexOf('.')) : '?',
+      author: author.replace('Frases de ', '')
+    })
   })
 
 
-  return fs.writeFileSync(store.storage.dirname, JSON.stringify(store.content, null, 2))
+  store.children = store.children.map((phrase, index) => ({
+    phrase,
+    ...store.content[index]
+  }))
+
+  console.log(store.children)
+
+
+  return fs.writeFileSync(store.storage.dirname, JSON.stringify(store.children, null, 2))
 })

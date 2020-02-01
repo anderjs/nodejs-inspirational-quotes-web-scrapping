@@ -1,34 +1,42 @@
 [
   {
-    "text": "No experimentamos las ventajas de un estado hasta que probamos los sinsabores de otros. No conocemos el valor de las cosas hasta que nos vemos privados de ellas.Daniel Defoe (1660-1731) Novelista y periodista inglés",
-    "category": ""
+    "phrase": "No experimentamos las ventajas de un estado hasta que probamos los sinsabores de otros. No conocemos el valor de las cosas hasta que nos vemos privados de ellas.",
+    "quotation": "(1660-1731) Novelista y periodista inglés",
+    "author": "Daniel Defoe"
   },
   {
-    "text": "Los verdaderos amigos se tienen que enfadar de vez en cuando.Louis Pasteur (1822-1895) Químico y microbiólogo francés",
-    "category": "Sentimientos/Amistad/Amigos"
+    "phrase": "Los verdaderos amigos se tienen que enfadar de vez en cuando.",
+    "quotation": "(1822-1895) Químico y microbiólogo francés",
+    "author": "Louis Pasteur"
   },
   {
-    "text": "Utiliza en la vida los talentos que poseas: el bosque estaría muy silencioso si sólo cantasen los pájaros que mejor cantan.Henry Van Dyke (1852-1933) Escritor estadounidense",
-    "category": "Cualidades/Talento"
+    "phrase": "Utiliza en la vida los talentos que poseas: el bosque estaría muy silencioso si sólo cantasen los pájaros que mejor cantan.",
+    "quotation": "(1852-1933) Escritor estadounidense",
+    "author": "Henry Van Dyke"
   },
   {
-    "text": "La igualdad tal vez sea un derecho, pero no hay poder humano que alcance jamás a convertirla en hecho.Honoré de Balzac (1799-1850) Escritor francés",
-    "category": "Miscelánea/Igualdad"
+    "phrase": "La igualdad tal vez sea un derecho, pero no hay poder humano que alcance jamás a convertirla en hecho.",
+    "quotation": "(1799-1850) Escritor francés",
+    "author": "Honoré de Balzac"
   },
   {
-    "text": "El que confía sus secretos a otro hombre se hace esclavo de él.Baltasar Gracián (1601-1658) Escritor español",
-    "category": "Miscelánea/Secreto"
+    "phrase": "El que confía sus secretos a otro hombre se hace esclavo de él.",
+    "quotation": "(1601-1658) Escritor español",
+    "author": "Baltasar Gracián"
   },
   {
-    "text": "Ayer es sólo un recuerdo; mañana nunca es lo que se supone que es.Bob Dylan (1941-?) Cantautor, compositor y músico estadounidense",
-    "category": "Tiempo/Futuro"
+    "phrase": "Ayer es sólo un recuerdo; mañana nunca es lo que se supone que es.",
+    "quotation": "(1941-?) Cantautor, compositor y músico estadounidense",
+    "author": "Bob Dylan"
   },
   {
-    "text": "La vida se hizo para vivirla. La curiosidad debe mantenerse viva. Uno nunca debe, por ninguna razón, dar la espalda a la vida",
-    "category": "Eleanor Roosevelt (1884-1962) Defensora de los derechos sociales, diplomática yNaturaleza/Vida"
+    "phrase": "La vida se hizo para vivirla. La curiosidad debe mantenerse viva. Uno nunca debe, por ninguna razón, dar la espalda a la vida.",
+    "quotation": "",
+    "author": "Eleanor Roosevelt"
   },
   {
-    "text": "Ahora no es el momento de pensar en lo que no tienes. Piensa en lo que puedes hacer con lo que hay.Ernest Hemingway (1899-1961) Escritor estadounidense",
-    "category": "Naturaleza/Ser humano/Hacer"
+    "phrase": "Ahora no es el momento de pensar en lo que no tienes. Piensa en lo que puedes hacer con lo que hay.",
+    "quotation": "(1899-1961) Escritor estadounidense",
+    "author": "Ernest Hemingway"
   }
 ]
