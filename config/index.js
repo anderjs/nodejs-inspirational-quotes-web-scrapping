@@ -1,6 +1,10 @@
 const config = {
   scanner: {
-    PROVERBIA: 'https://proverbia.net/'
+    PROVERBIA: 'https://proverbia.net/',
+    GOODREADS: {
+      widsom: 'https://goodreads.com/quotes/tag/widsom'
+    }
+
   },
   cron: {
     time: '* * * * *'

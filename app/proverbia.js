@@ -3,8 +3,7 @@ const fs = require('fs')
 const request = require('request')
 const path = require('path')
 
-const config = require('./config')
-const tasks = require('./tasks')
+const config = require('../config')
 
 const store = {
   $: null,
@@ -13,7 +12,7 @@ const store = {
     author: ['a', 'title']
   },
   storage: {
-    dirname: path.join(__dirname, 'content', 'index.json')
+    dirname: path.join(__dirname, '../', 'content', 'proverbia.json')
   },
   content: [],
   children: [],
@@ -40,9 +39,6 @@ request(config.scanner.PROVERBIA,
     })
   }
 
-  const [ selector, attribute ] = store.scanner.author
-
-
   store.$(store.scanner.tag).children('p').each(function(index, element) {
     const { $, utils } = store
 
@@ -52,7 +48,7 @@ request(config.scanner.PROVERBIA,
   })
 
   store.$(store.scanner.tag).children('footer').each(function(index, element) {
-    const { $, utils } = store
+    const { $ } = store
 
     /**
      * @type {string}
@@ -72,8 +68,6 @@ request(config.scanner.PROVERBIA,
     phrase,
     ...store.content[index]
   }))
-
-  console.log(store.children)
 
 
   return fs.writeFileSync(store.storage.dirname, JSON.stringify(store.children, null, 2))
