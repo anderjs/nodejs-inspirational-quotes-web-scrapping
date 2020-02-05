@@ -8,7 +8,10 @@ const config = require("../config")
 const store = {
   $: null,
   scanner: {
-    tag: ".quoteText"
+    tag: ".quoteText",
+    resources: {
+      image: '.quoteDetails'
+    }
   },
   storage: {
     dirname: path.join(__dirname, "../", "content", "goodreads.json")
@@ -41,7 +44,7 @@ request(
 
     const { $, utils } = store
 
-    $('.quoteText').each(function(index, element) {
+    $(store.scanner.tag).each(function(index, element) {
       const data = $(this).remove('br').text().replace(utils.regExp, '')
 
       const [ quote, author ] = data.split(store.keys.match)
@@ -55,6 +58,14 @@ request(
         goodreads
       )
     })
+
+    $(store.scanner.resources.image).each(function(index, element) {
+      const data = $(this).find('img').attr('src')
+
+      store.content[index].src = data
+    })
+
+    console.log(store.content)
 
     return fs.writeFileSync(store.storage.dirname, JSON.stringify(store.content, null, 2))
   }
