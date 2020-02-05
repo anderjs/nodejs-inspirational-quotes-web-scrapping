@@ -65,7 +65,6 @@ request(
       store.content[index].src = data
     })
 
-    console.log(store.content)
 
     return fs.writeFileSync(store.storage.dirname, JSON.stringify(store.content, null, 2))
   }
